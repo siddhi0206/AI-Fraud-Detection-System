@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+venv/
+.env
+prediction_logs.csv
+*.pkl/
+.idea/
+.vscode/
+*.db
