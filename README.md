@@ -1,170 +1,92 @@
-#  AI-Powered Real-Time Fraud Detection System
+# 🛡️ AI Fraud Detection System
 
-## Project Overview
-
-The AI-Powered Real-Time Fraud Detection System is a Machine Learning application that detects fraudulent financial transactions using historical transaction data and intelligent risk analysis.
-
-The system combines:
-- Machine Learning (Random Forest)
-- Anomaly Detection (Isolation Forest)
-- Rule-Based Fraud Detection
-- Risk Score Calculation
-- Explainable AI
-- Interactive Streamlit Dashboard
+An AI-powered Fraud Detection System built using **Python**, **Machine Learning**, **Streamlit**, and **MySQL**. This application analyzes financial transactions, predicts fraudulent activities, calculates risk scores, and provides an interactive dashboard for monitoring fraud.
 
 ---
 
-#  Features
+##  Project Overview
 
--  Real-Time Fraud Prediction
--  Random Forest Machine Learning Model
--  Isolation Forest Anomaly Detection
--  Intelligent Risk Scoring
--  Explainable AI (Reasons for Prediction)
--  Fraud Alert System
--  Transaction Logging
--  Interactive Dashboard
--  CSV Report Download
--  MySQL Database Integration
+The AI Fraud Detection System is designed to identify suspicious financial transactions using machine learning algorithms. It helps organizations reduce fraud by providing real-time predictions, transaction monitoring, and visual analytics.
 
 ---
 
-#  Technologies Used
+##  Features
 
-- Python 3.13
+-  Detect fraudulent transactions using Machine Learning
+-  Interactive dashboard built with Streamlit
+-  Fraud alerts for high-risk transactions
+-  Risk score calculation
+-  Feature engineering for improved predictions
+-  MySQL database integration
+-  Prediction logging
+-  Feature importance analysis
+-  Isolation Forest for anomaly detection
+
+---
+
+##  Technologies Used
+
+- Python
 - Streamlit
+- Scikit-learn
 - Pandas
 - NumPy
-- Scikit-learn
-- Plotly
 - MySQL
-- PyMySQL
 - Joblib
-- Faker
+- Pickle
+- Git & GitHub
 
 ---
 
-# Project Structure
+##  Project Structure
 
-AI-Fraud-Detection-System
+```
+AI-Fraud-Detection-System/
 │
 ├── app.py
 ├── dashboard.py
+├── alerts.py
 ├── predict.py
+├── model.py
 ├── train_model.py
 ├── database.py
 ├── config.py
+├── logger.py
+├── feature_engineering.py
+├── risk_score.py
+├── generate_data.py
 │
-├── models/
-│   ├── fraud_model.pkl
-│   ├── isolation_model.pkl
-│   └── encoders.pkl
+├── fraud_model.pkl
+├── isolation_model.pkl
+├── encoders.pkl
 │
-├── data/
-│   ├── transactions.csv
-│   └── feature_importance.csv
+├── feature_importance.csv
+├── model_metrics.json
+├── transactions.csv
+├── prediction_logs.csv
 │
 ├── README.md
-└── .gitignore
----
-
-#  Dataset
-
-Synthetic Dataset Generated using Python & Faker
-
-**Total Transactions:** 50,000
-
-### Dataset Features
-
-- Transaction ID
-- Customer ID
-- Transaction Time
-- Amount
-- Vendor
-- Merchant Category
-- Location
-- Transaction Type
-- Payment Method
-- Device Type
-- Previous Transactions
-- Average Amount
-- Fraud Label
+├── .gitignore
+└── requirements.txt
+```
 
 ---
 
-#  Machine Learning Models
+##  Installation
 
-### Random Forest Classifier
-
-Used for supervised fraud prediction.
-
-### Isolation Forest
-
-Used for anomaly detection.
-
----
-
-#  Model Performance
-
-| Metric | Score |
-|---------|--------|
-| Accuracy | 98.84% |
-| Precision | 93.55% |
-| Recall | 91.39% |
-| F1 Score | 92.46% |
-| ROC-AUC | 99.83% |
-
----
-
-#  Risk Score Calculation
-
-Risk score is calculated using:
-
-| Condition | Score |
-|-----------|-------|
-| ML Fraud Probability | Up to 50 |
-| Amount > ₹50,000 | +20 |
-| Unknown Vendor | +10 |
-| Unknown Device | +5 |
-| Previous Transactions < 5 | +5 |
-| Night Transaction | +5 |
-| High-Risk Location | +5 |
-
-### Decision Rules
-
-| Risk Score | Decision |
-|------------|----------|
-| 0 – 49 | APPROVE |
-| 50 – 79 | VERIFY (OTP) |
-| 80 – 100 | BLOCK |
-
----
-
-#  Dashboard Features
-
-The Streamlit dashboard provides:
-
-- Live Fraud Prediction
-- Fraud Probability
-- Risk Score
-- Decision Engine
-- Explainable AI
-- Fraud Alerts
-- Prediction History
-- Interactive Charts
-- Download Prediction Logs
-
----
-
-#  Installation
-
-### Clone Repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/siddhi0206/AI-Fraud-Detection-System.git
 ```
 
-### Install Requirements
+### 2. Navigate to the project folder
+
+```bash
+cd AI-Fraud-Detection-System
+```
+
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -172,30 +94,48 @@ pip install -r requirements.txt
 
 ---
 
-#  Run the Project
+## ▶️ Run the Application
 
-### Generate Dataset
-
-```bash
-python generate_data.py
-```
-
-### Create Database & Import Data
-
-```bash
-python database.py
-```
-
-### Train Models
-
-```bash
-python train_model.py
-```
-
-### Run Streamlit Application
+Start the Streamlit application:
 
 ```bash
 streamlit run app.py
 ```
+
+Open your browser and visit:
+
+```
+http://localhost:8501
+```
+
+---
+
+##  Machine Learning Models
+
+This project uses:
+
+- Random Forest Classifier
+- Isolation Forest (Anomaly Detection)
+
+The models are trained to identify fraudulent transactions based on transaction features.
+
+---
+
+##  Output
+
+The application provides:
+
+- Fraud Prediction
+- Fraud Probability
+- Risk Score
+- Transaction Logs
+- Interactive Dashboard
+- Feature Importance Analysis
+
+---
+
+## 📂 Dataset
+
+The project includes a sample transaction dataset for demonstration purposes.
 
 ---
