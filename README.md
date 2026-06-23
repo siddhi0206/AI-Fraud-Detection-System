@@ -46,29 +46,26 @@ The system combines:
 
 # Project Structure
 
-```
-AI_Fraud_Detection_System/
+AI-Fraud-Detection-System
 │
 ├── app.py
-├── config.py
-├── database.py
-├── generate_data.py
-├── feature_engineering.py
-├── train_model.py
-├── predict.py
 ├── dashboard.py
-├── alerts.py
-├── logger.py
-├── risk_score.py
-├── requirements.txt
+├── predict.py
+├── train_model.py
+├── database.py
+├── config.py
+│
+├── models/
+│   ├── fraud_model.pkl
+│   ├── isolation_model.pkl
+│   └── encoders.pkl
+│
+├── data/
+│   ├── transactions.csv
+│   └── feature_importance.csv
+│
 ├── README.md
-├── transactions.csv
-├── prediction_logs.csv
-├── random_forest_model.pkl
-├── isolation_forest.pkl
-└── feature_importance.csv
-```
-
+└── .gitignore
 ---
 
 #  Dataset
